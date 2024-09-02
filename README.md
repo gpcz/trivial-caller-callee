@@ -3,3 +3,9 @@
 # trivial-caller-callee
 
 WARNING: Currently experimental.  Do not use yet.
+
+## Notes
+
+This system applies a "lowest common denominator" of all implementations.
+
+* Callers that are not fbound will not be included.
