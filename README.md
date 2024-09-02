@@ -4,10 +4,16 @@
 
 # trivial-caller-callee
 
-WARNING: Currently experimental.  Do not use yet.
+Wrapper functions to get callers/callees of functions in different Common Lisp
+implementations.
+
+Currently supports:
+* Steel Bank Common Lisp (caller + callee)
+* Clozure Common Lisp (caller)
+* Allegro Common Lisp (caller)
 
 ## Notes
 
-This system applies a "lowest common denominator" of all implementations.
-
-* Callers that are not fbound will not be included.
+This system does not ensure consistency of output between implementations.
+You may get more output on implementations that can detect closures or
+other types of calls.
