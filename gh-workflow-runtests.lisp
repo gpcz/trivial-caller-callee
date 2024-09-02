@@ -9,4 +9,4 @@
                  (uiop/os:getcwd))))
    :inherit-configuration))
 
-(format t "~S" (asdf:test-system :trivial-caller-callee))
+(asdf:test-system :trivial-caller-callee)
