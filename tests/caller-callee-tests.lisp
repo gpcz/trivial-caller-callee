@@ -20,7 +20,8 @@
 (fiveam:test callee-tests
   #+:sbcl (fiveam:is (equal (list #'b)
                     (trivial-caller-callee:get-function-callees #'a)))
-  #+:sbcl (fiveam:is (equal nil (trivial-caller-callee:get-function-callees #'b))))
+  #+:sbcl (fiveam:is
+           (equal nil (trivial-caller-callee:get-function-callees #'b))))
 
 (defun run-test-suite ()
   "Runs the test suite(s) for caller-callee."
