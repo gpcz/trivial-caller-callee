@@ -15,7 +15,7 @@
   (+ 1 (b)))
 
 (fiveam:test caller-tests
-  (fiveam:is (find 'a (trivial-caller-callee:get-function-callers 'b))))
+  (fiveam:is (find #'a (trivial-caller-callee:get-function-callers 'b))))
 
 (fiveam:test callee-tests
   #+:sbcl (fiveam:is (equal (list #'b)
