@@ -1,5 +1,6 @@
 ![example workflow](https://github.com/gpcz/trivial-caller-callee/actions/workflows/testsbcl.yml/badge.svg)
 ![example workflow](https://github.com/gpcz/trivial-caller-callee/actions/workflows/testccl.yml/badge.svg)
+![example workflow](https://github.com/gpcz/trivial-caller-callee/actions/workflows/testallegro.yml/badge.svg)
 
 # trivial-caller-callee
 
