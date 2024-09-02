@@ -2,10 +2,12 @@
 #+:sbcl (require :sb-introspect)
 
 (defun get-function-callers-worker (the-function-symbol)
-  #+:sbcl (sb-introspect:find-function-callers (symbol-function the-function-symbol))
+  #+:sbcl (sb-introspect:find-function-callers
+           (symbol-function the-function-symbol))
   #+:ccl (ccl::callers the-function-symbol)
   #+:allegro (xref:get-relation :calls :wild the-function-symbol)
-  #-(or sbcl ccl allegro) (error "Library does not support your implementation"))
+  #-(or sbcl ccl allegro)
+  (error "Library does not support your implementation"))
 
 (defun my-symbol-function (something)
   (cond
