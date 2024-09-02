@@ -12,6 +12,28 @@ Currently supports:
 * Clozure Common Lisp (caller)
 * Allegro Common Lisp (caller)
 
+## Loading
+
+To load:
+```
+(asdf:operate 'asdf:load-op 'trivial-caller-callee)
+```
+
+To test:
+```
+(asdf:operate 'asdf:test-op 'trivial-caller-callee)
+```
+
+## Example
+```
+CL-USER> (defun b () (+ 1 2))
+B
+CL-USER> (defun a () (+ 1 (b)))
+A
+CL-USER> (trivial-caller-callee:get-function-callers 'b)
+(A)
+```
+
 ## Notes
 
 This system does not ensure consistency of output between implementations.
