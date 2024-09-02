@@ -31,7 +31,7 @@ B
 CL-USER> (defun a () (+ 1 (b)))
 A
 CL-USER> (trivial-caller-callee:get-function-callers 'b)
-(A)
+(#'A)
 ```
 
 ## Notes
