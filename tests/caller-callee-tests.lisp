@@ -1,5 +1,6 @@
 (in-package :trivial-caller-callee/tests)
 
+(setf fiveam:*debug-on-failure* t)
 (fiveam:def-suite caller-callee-tests
   :description "Tests basic caller-callee functionality.")
 (fiveam:in-suite caller-callee-tests)
