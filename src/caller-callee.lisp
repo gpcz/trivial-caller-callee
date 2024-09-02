@@ -6,7 +6,7 @@
    the-function."
   #+:sbcl (sb-introspect:find-function-callers (symbol-function the-function-symbol))
   #+:ccl (ccl::callers the-function-symbol)
-  #+:allegro (xref:who-calls the-function-symbol)
+  #+:allegro (xref:get-relation :calls the-function-symbol)
   #-(or sbcl ccl allegro) (error "Library does not support your implementation"))
 
 (defun get-function-callees (the-function)
